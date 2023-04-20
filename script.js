@@ -1,16 +1,10 @@
-const slider = document.querySelector('.slider');
-const slides = slider.querySelectorAll('.slide');
-const slideWidth = slides[0].offsetWidth;
-let slideIndex = 0;
+const header = document.querySelector('header');
+const headerHeight = header.offsetHeight;
 
-function moveSlider() {
-  slider.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
-}
-
-setInterval(() => {
-  slideIndex++;
-  if (slideIndex >= slides.length) {
-    slideIndex = 0;
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > headerHeight) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
   }
-  moveSlider();
-}, 3000);
+});

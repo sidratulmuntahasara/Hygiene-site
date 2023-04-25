@@ -1078,23 +1078,23 @@
             <form action="./forms/schedule-a-call.php" method="post" role="form" id="getintouch" class="php-email-form" data-aos="fade-up" data-aos-delay="100" onsubmit="return postToGoogle();">
               <div class="row gy-4">
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" name="entry.327898406" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <input type="text" name="entry.327898406" class="form-control" id="Name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
                   <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="email" class="form-control" name="entry.1409917145" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                  <input type="email" class="form-control" name="entry.1409917145" id="Email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
                   <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="entry.1330620365" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <input type="text" class="form-control" name="entry.1330620365" id="Phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
                   <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="date" name="entry.1297256814" class="form-control" id="date" placeholder="Date" data-msg="Please enter the date">
+                  <input type="date" name="entry.1297256814" class="form-control" id="Date" placeholder="Date" data-msg="Please enter the date">
                   <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="time" class="form-control" name="entry.87025472" id="time" placeholder="Time" data-msg="Please enter the time">
+                  <input type="time" class="form-control" name="entry.87025472" id="Time" placeholder="Time" data-msg="Please enter the time">
                   <div class="validate"></div>
                 </div>
                 <!-- <div class="col-lg-4 col-md-6">
@@ -1104,7 +1104,7 @@
                 </div> -->
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="entry.1972107312" rows="5" id="message" placeholder="Message"></textarea>
+                <textarea class="form-control" name="entry.1972107312" rows="5" id="Message" placeholder="Message"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
@@ -1314,12 +1314,12 @@
   <!-- Form Script -->
   <script>
     function postToGoogle() {
-      var field1 = $("#name").val();
-      var field2 = $("#email").val();
-      var field3 = $("#phone").val();
-      var field4 = $("#date").val();
-      var field5 = $("#time").val();
-      var field4 = $("#message").val();
+      var field1 = $("#Name").val();
+      var field2 = $("#Email").val();
+      var field3 = $("#Phone").val();
+      var field4 = $("#Date").val();
+      var field5 = $("#Time").val();
+      var field4 = $("#Message").val();
 
       $.ajax({
         url: "https://docs.google.com/forms/u/6/d/e/1FAIpQLSfE78DBOBaLRhcyXBMuZBwSddJxcLLo1qXzctzDU3ZVxhKxVA/formResponse",

@@ -100,7 +100,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: rgba(55, 55, 63, 0.05);
+  background: rgba(224, 224, 236, 0.05);
   margin-top: 90px;
 }
 
@@ -526,7 +526,7 @@ section {
   }
 
   .mobile-nav-show {
-    color: var(--color-secondary);
+    color: #fff;
     font-size: 28px;
     cursor: pointer;
     line-height: 0;
@@ -536,7 +536,7 @@ section {
   }
 
   .mobile-nav-hide {
-    color: var(--color-secondary);
+    color: #313131;
     font-size: 32px;
     cursor: pointer;
     line-height: 0;

@@ -1075,26 +1075,26 @@
           <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/booking.png);" data-aos="zoom-out" data-aos-delay="200"></div>
 
           <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
-            <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+            <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100" id="contact" onsubmit="return postToGoogle();">
               <div class="row gy-4">
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <input type="text" name="entry.327898406" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
                   <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                  <input type="email" class="form-control" name="entry.1409917145" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
                   <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <input type="text" class="form-control" name="entry.1330620365" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
                   <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="date" name="date" class="form-control" id="date" placeholder="Date" data-msg="Please enter the date">
+                  <input type="date" name="entry.1297256814" class="form-control" id="date" placeholder="Date" data-msg="Please enter the date">
                   <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="time" class="form-control" name="time" id="time" placeholder="Time" data-msg="Please enter the time">
+                  <input type="time" class="form-control" name="entry.87025472" id="time" placeholder="Time" data-msg="Please enter the time">
                   <div class="validate"></div>
                 </div>
                 <!-- <div class="col-lg-4 col-md-6">
@@ -1104,7 +1104,7 @@
                 </div> -->
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+                <textarea class="form-control" name="entry.1972107312" rows="5" id="message" placeholder="Message"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
@@ -1306,9 +1306,45 @@
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Form Script -->
+  <script>
+    function postToGoogle() {
+      var field1 = $("#name").val();
+      var field2 = $("#email").val();
+      var field3 = $("#phone").val();
+      var field4 = $("#date").val();
+      var field5 = $("#time").val();
+      var field4 = $("#message").val();
+
+      $.ajax({
+        url: "https://docs.google.com/forms/u/6/d/e/1FAIpQLSfE78DBOBaLRhcyXBMuZBwSddJxcLLo1qXzctzDU3ZVxhKxVA/formResponse",
+          
+        //add your google form generated numbers below which are also the 'names' of your inputs     
+        data: {
+          "entry.327898406": field1,
+          "entry.1409917145": field2,
+          "entry.1330620365": field3,
+          "entry.1297256814": field4,
+          "entry.87025472": field5,
+          "entry.1972107312": field6
+        },
+        type: "POST",
+        dataType: "xml",
+        success: function (d) {
+          $('#contact').trigger('reset');
+        },
+        error: function (x, y, z) {
+          $('#contact').trigger('reset');
+        }
+      });
+      return false;
+    }
+  </script>
 
 </body>
 

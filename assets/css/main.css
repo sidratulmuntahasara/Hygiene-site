@@ -273,8 +273,8 @@ section {
   color: var(--color-primary);
 }
 
-.header .btn-book-a-table,
-.header .btn-book-a-table:focus {
+.header .btn-sch-a-call,
+.header .btn-sch-a-call:focus {
   font-size: 14px;
   color: #fff;
   background: var(--color-primary);
@@ -284,8 +284,8 @@ section {
   transition: 0.3s;
 }
 
-.header .btn-book-a-table:hover,
-.header .btn-book-a-table:focus:hover {
+.header .btn-sch-a-call:hover,
+.header .btn-sch-a-call:focus:hover {
   color: #fff;
   background: rgba(21, 168, 21, 0.8);
 }
@@ -1196,34 +1196,34 @@ cite {
 /*--------------------------------------------------------------
 # Book A Call Section
 --------------------------------------------------------------*/
-.book-a-table .reservation-img {
+.sch-a-call .reservation-img {
   min-height: 500px;
   background-size: cover;
   background-position: center;
 }
 
-.book-a-table .reservation-form-bg {
+.sch-a-call .reservation-form-bg {
   background: rgba(55, 55, 63, 0.04);
 }
 
-.book-a-table .php-email-form {
+.sch-a-call .php-email-form {
   padding: 40px;
 }
 
 @media (max-width: 575px) {
-  .book-a-table .php-email-form {
+  .sch-a-call .php-email-form {
     padding: 20px;
   }
 }
 
-.book-a-table .php-email-form h3 {
+.sch-a-call .php-email-form h3 {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.book-a-table .php-email-form h4 {
+.sch-a-call .php-email-form h4 {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1231,12 +1231,12 @@ cite {
   margin: 20px 0 0 0;
 }
 
-.book-a-table .php-email-form p {
+.sch-a-call .php-email-form p {
   font-size: 14px;
   margin-bottom: 20px;
 }
 
-.book-a-table .php-email-form .error-message {
+.sch-a-call .php-email-form .error-message {
   display: none;
   color: #fff;
   background: #df1529;
@@ -1246,7 +1246,7 @@ cite {
   font-weight: 600;
 }
 
-.book-a-table .php-email-form .sent-message {
+.sch-a-call .php-email-form .sent-message {
   display: none;
   color: #fff;
   background: #059652;
@@ -1256,7 +1256,7 @@ cite {
   font-weight: 600;
 }
 
-.book-a-table .php-email-form .loading {
+.sch-a-call .php-email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
@@ -1264,7 +1264,7 @@ cite {
   margin-bottom: 24px;
 }
 
-.book-a-table .php-email-form .loading:before {
+.sch-a-call .php-email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1276,28 +1276,28 @@ cite {
   animation: animate-loading 1s linear infinite;
 }
 
-.book-a-table .php-email-form input,
-.book-a-table .php-email-form textarea {
+.sch-a-call .php-email-form input,
+.sch-a-call .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 0;
 }
 
-.book-a-table .php-email-form input:focus,
-.book-a-table .php-email-form textarea:focus {
+.sch-a-call .php-email-form input:focus,
+.sch-a-call .php-email-form textarea:focus {
   border-color: var(--color-primary);
 }
 
-.book-a-table .php-email-form input {
+.sch-a-call .php-email-form input {
   padding: 12px 15px;
 }
 
-.book-a-table .php-email-form textarea {
+.sch-a-call .php-email-form textarea {
   padding: 12px 15px;
 }
 
-.book-a-table .php-email-form button[type=submit] {
+.sch-a-call .php-email-form button[type=submit] {
   background: var(--color-primary);
   border: 0;
   padding: 14px 60px;
@@ -1306,7 +1306,7 @@ cite {
   border-radius: 50px;
 }
 
-.book-a-table .php-email-form button[type=submit]:hover {
+.sch-a-call .php-email-form button[type=submit]:hover {
   background: #ec2727;
 }
 
@@ -1535,7 +1535,7 @@ cite {
   margin-bottom: 30px;
 }
 
-.hero .btn-book-a-table {
+.hero .btn-sch-a-call {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -1548,7 +1548,7 @@ cite {
   box-shadow: 0 8px 28px rgba(18, 206, 34, 0.2);
 }
 
-.hero .btn-book-a-table:hover {
+.hero .btn-sch-a-call:hover {
   background: rgba(17, 134, 13, 0.8);
   box-shadow: 0 8px 28px rgba(42, 219, 19, 0.45);
 }

@@ -4,6 +4,28 @@ document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
   /**
+   * Cookies
+   */
+  document.getElementById("accept-cookies").addEventListener("click", function() {
+    setCookie("user_preference", "accepted", 365);
+    document.getElementById("cookie-banner").style.display = "none";
+  });
+  
+  document.getElementById("decline-cookies").addEventListener("click", function() {
+    setCookie("user_preference", "declined", 365);
+    document.getElementById("cookie-banner").style.display = "none";
+  });
+  
+  // Check user preference and hide the banner if a choice was previously made
+  window.onload = function() {
+    let userPreference = getCookie("user_preference");
+    if (userPreference !== null) {
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+  };
+
+
+  /**
    * Preloader
    */
   const preloader = document.querySelector('#preloader');

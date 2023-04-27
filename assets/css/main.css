@@ -235,6 +235,81 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Cookie Banner
+--------------------------------------------------------------*/
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(52, 58, 64, 0.9);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 100000;
+  color: #f8f9fa;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cookie-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.cookie-banner-content p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cookie-banner-content a {
+  color: #f8f9fa;
+  text-decoration: underline;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cookie-btn {
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.accept {
+  background-color: #28a745;
+  color: white;
+}
+
+.decline {
+  background-color: #dc3545;
+  color: white;
+}
+
+@media screen and (min-width: 576px) {
+  .cookie-btn {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+
+/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 .header {

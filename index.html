@@ -35,6 +35,49 @@
 
 <body>
 
+  <!-- ======= Cookie ======= -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-banner-content">
+      <p>We use cookies to enhance your experience on our website. By clicking "Accept", you consent to the use of cookies. For more information, please read our <a href="https://www.cookiepolicygenerator.com/live.php?token=VkNAEHJaUcz1Hw3JhWdjESMmXJSnx7qk">cookie policy</a>.</p>
+      <div class="cookie-banner-actions">
+        <button id="accept-cookies" class="cookie-btn accept">Accept All</button>
+        <button id="decline-cookies" class="cookie-btn decline">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Set a cookie
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    // Get a cookie
+    function getCookie(name) {
+        let nameEQ = name + "=";
+        let ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // Erase a cookie
+    function eraseCookie(name) {
+        document.cookie = name + '=; Max-Age=-99999999;';
+    }
+
+  </script>
+  
+
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
@@ -90,7 +133,7 @@
           <p data-aos="fade-up" data-aos-delay="100">Discover our range of innovative and effective detergent products.</p>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
             <a href="#sch-a-call" class="btn-sch-a-call">Book a Call</a>
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 text-center text-lg-start">
@@ -132,7 +175,7 @@
 
               <div class="position-relative mt-4">
                 <img src="assets/img/about-2.png" class="img-fluid" alt="">
-                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+                <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a> -->
               </div>
             </div>
           </div>

@@ -1352,6 +1352,15 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js" defer></script>
 
+  <!-- Mordenizr -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script>
+    Modernizr.load({
+      test: Modernizr.flexbox,
+      nope: 'path/to/flexbox-polyfill.js'
+    });
+  </script>
+
   <!-- Form Script -->
   <!-- <script>
     function postToGoogle() {

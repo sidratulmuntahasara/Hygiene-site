@@ -308,6 +308,22 @@ section {
   }
 }
 
+@media (max-width: 600px) {
+  .cookie-banner-content {
+    font-size: 14px;
+  }
+
+  .cookie-banner-content p {
+    margin-bottom: 8px;
+  }
+
+  .cookie-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Header
